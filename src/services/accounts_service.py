@@ -1,6 +1,6 @@
 from src.core.database import database
 from models.accounts_models import accounts
-from src.schemas.account import AccountIn
+from src.schemas.account_schemas import AccountIn
 
 class AccountService:
     async def read_all(self, limit: int, skip: int = 0) -> list[Record]:
