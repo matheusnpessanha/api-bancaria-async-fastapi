@@ -3,4 +3,4 @@ import enum
 
 class TransactionType(enum.Enum):
     deposit = "deposit"
-    withdraw = "withdraw"
+    withdrawal = "withdrawal"
