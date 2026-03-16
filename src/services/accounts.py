@@ -1,5 +1,5 @@
-from src.database import database
-from src.models.account import accounts
+from src.core.database import database
+from models.accounts_models import accounts
 from src.schemas.account import AccountIn
 
 class AccountService:
