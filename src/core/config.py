@@ -5,6 +5,7 @@ class Settings(BaseSettings):
     ENVIRONMENT: str
     JWT_SECRET: str
     JWT_ALGORITHM: str
+    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int
 
     class Config:
         env_file = ".env"
