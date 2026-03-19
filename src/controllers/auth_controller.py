@@ -1,0 +1,12 @@
+from fastapi import APIRouter
+
+from src.schemas.auth_schemas import LoginIn
+from src.core.security import sign_jwt
+from src.views.auth_views import LoginOut
+
+router = APIRouter(prefix="/auth")
+
+
+@router.post("/login", response_model=LoginOut)
+async def login(data: LoginIn):
+    return sign_jwt(user_id=data.user_id)

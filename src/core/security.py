@@ -1,5 +1,6 @@
 from uuid import uuid4
 import time
+from datetime import datetime, timedelta
 import jwt
 from typing import Annotated
 from pydantic import BaseModel
@@ -25,17 +26,10 @@ class JWTToken(BaseModel):
     access_token: AccessToken
 
 
-def sign_jwt(user_id: int) -> dict:
-    now = time.time()
-
+def sign_jwt(user_id):
     payload = {
-        "iss": "desafio-bank.com.br",
-        "sub": user_id,
-        "aud": "desafio-bank",
-        "exp": now + (60 * 30),  # 30 minutos
-        "iat": now,
-        "nbf": now,
-        "jti": uuid4().hex,
+        "sub": str(user_id),  
+        "exp": datetime.utcnow() + timedelta(hours=1)  
     }
 
     token = jwt.encode(payload, SECRET, algorithm=ALGORITHM)
