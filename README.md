@@ -16,7 +16,6 @@ Projeto desenvolvido como parte do desafio da DIO para criação de uma **API ba
 
 ### 1. Criar ambiente virtual
 
-```bash
 python -m venv venv
 
 ### 2. Ativar ambiente virtual
