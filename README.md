@@ -40,10 +40,16 @@ Criar migration
 alembic revision --autogenerate -m "initial"
 
 Aplicar migrations
+
 alembic upgrade head
 
 ▶️ Rodando a aplicação
+
 uvicorn main:app --reload
+
+
+
+
 
 👨‍💻 Autor
 
