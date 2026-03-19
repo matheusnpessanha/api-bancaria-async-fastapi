@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fastapi-project"
+version = "0.1.0"
+description = "Projeto de API assíncrona utilizando FastAPI"
+authors = ["Matheus Pessanha"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "*"
+uvicorn = { extras = ["standard"], version = "*" }
+sqlalchemy = "*"
+asyncpg = "*"
+psycopg2-binary = "*"
+pydantic-settings = "*"
+alembic = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
